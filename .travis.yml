@@ -8,7 +8,7 @@ notifications:
   email: false
 
 before_script:
-  - npm install react lodash
+  - npm install react react-dom lodash
 
 deploy:
   provider: npm
