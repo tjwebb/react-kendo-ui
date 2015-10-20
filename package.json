@@ -40,6 +40,8 @@
   },
   "browserify-shim": {
     "react": "global:React",
+    "react-dom/server": "global:React",
+    "react-dom": "global:ReactDOM",
     "lodash": "global:_"
   }
 }
