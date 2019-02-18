@@ -16,7 +16,7 @@ module.exports = KendoTemplate;
 var React = (typeof window !== "undefined" ? window['React'] : typeof global !== "undefined" ? global['React'] : null);
 var ReactDOM = (typeof window !== "undefined" ? window['ReactDOM'] : typeof global !== "undefined" ? global['ReactDOM'] : null);
 var _ = (typeof window !== "undefined" ? window['_'] : typeof global !== "undefined" ? global['_'] : null);
-var reactTags = _.keys(React.DOM);
+// var reactTags = _.keys(React.DOM);
 
 function mountKendoWidget (component, widget) {
   component.$elem[widget](component.props.options);
@@ -34,7 +34,7 @@ var KendoWidgetMixin = function (widget) {
     propTypes: {
       options: React.PropTypes.object,
       debug: React.PropTypes.bool,
-      tag: React.PropTypes.oneOf(reactTags).isRequired
+      tag: React.PropTypes.string.isRequired
     },
 
     getDefaultProps: function () {
